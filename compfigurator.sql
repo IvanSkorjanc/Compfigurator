@@ -1,6 +1,6 @@
 # sipanje na server
 /*
-c:\xampp\mysql\bin\mysql -uedunova -pedunova --default_character_set=utf8 < "C:\pokušaj završnog\compfigurator.sql"
+c:\xampp\mysql\bin\mysql -uedunova -pedunova --default_character_set=utf8 < "C:\pokušaj završnog\Compfigurator\compfigurator.sql"
 */
 
 drop database if exists compfigurator;
@@ -10,7 +10,7 @@ use compfigurator;
 create table konfiguracija (
 sifra int not null primary key auto_increment,
 naziv varchar(100) not null,
-opis varchar(50) not null,
+opis varchar(100) not null,
 cijena decimal(18,2) not null
 );
 
@@ -127,7 +127,9 @@ values
 # šifra 11
 ('Intel Core i5 9400F','up to 4.10GHz, Coffee Lake',1),
 # šifra 12
-('NVIDIA GTX1650 4GB','4GB GDDR5',3);
+('NVIDIA GTX1650 4GB','4GB GDDR5',3),
+# šifra 13
+('Memorija Adata DDR4 4GB','DDR4 4GB 2400MHz',5);
 
 
 insert into dio
@@ -164,7 +166,23 @@ values
 # šifra 15
 (8,11),
 # šifra 16
-(8,12);
+(8,12),
+# šifra 17
+(1,13),
+# šifra 18
+(2,13),
+# šifra 19
+(3,13),
+# šifra 20
+(4,13),
+# šifra 21
+(5,13),
+# šifra 22
+(6,13),
+# šifra 23
+(7,13),
+# šifra 24
+(8,13);
 
 
 # šta dalje?
