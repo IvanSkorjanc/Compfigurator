@@ -186,3 +186,11 @@ values
 
 
 # šta dalje?
+
+/* 
+moguće po cijeni
+select * 
+from konfiguracija
+order by abs(cijena - 3700.00)
+limit 1;
+*/
