@@ -18,7 +18,8 @@ create table komponenta (
 sifra int not null primary key auto_increment,
 naziv varchar(50) not null,
 opis varchar(100) not null,
-proizvodac int
+proizvodac int,
+cijena decimal(18,2) not null
 );
 
 create table proizvodac (
@@ -29,7 +30,8 @@ zemlja varchar(50) not null
 
 create table dio (
 konfiguracija int,
-komponenta int
+komponenta int,
+kolicina decimal(18,2) not null
 );
 
 
@@ -102,87 +104,87 @@ values
 ('FSP Group','Tajvan');
 
 insert into komponenta
-(naziv,opis,proizvodac)
+(naziv,opis,proizvodac,cijena)
 values
 # šifra 1
-('AMD A10 9700','up to 3.8GHz, Radeon R7, AM4, 65W, box',2),
+('AMD A10 9700','up to 3.8GHz, Radeon R7, AM4, 65W, box',2,532.00),
 # šifra 2
-('AMD Radeon RX550','2GB DDR5',2),
+('AMD Radeon RX550','2GB DDR5',2,708.00),
 # šifra 3
-('AMD Radeon RX560','2GB DDR5',2),
+('AMD Radeon RX560','2GB DDR5',2,823.00),
 # šifra 4
-('AMD Ryzen 3 2200G','up to 3.7GHz, AM4',2),
+('AMD Ryzen 3 2200G','up to 3.7GHz, AM4',2,729.00),
 # šifra 5
-('Nvidia GeForce GTX1650','4GB GDDR4',3),
+('Nvidia GeForce GTX1650','4GB GDDR4',3,1373.98),
 # šifra 6
-('Intel Core i3 9100F','up to 4.2GHz, Coffee Lake',1),
+('Intel Core i3 9100F','up to 4.2GHz, Coffee Lake',1,887.53),
 # šifra 7
-('AMD Ryzen 5 2400G','up to 3.9GHz, AM4',2),
+('AMD Ryzen 5 2400G','up to 3.9GHz, AM4',2,1040.00),
 # šifra 8
-('AMD RADEON RX560 4GB','AMD RADEON RX560 4GB DDR5',2),
+('AMD RADEON RX560 4GB','AMD RADEON RX560 4GB DDR5',2,1090.68),
 # šifra 9
-('Intel Core i5 8400','up to 4.0GHz, Coffee Lake',1),
+('Intel Core i5 8400','up to 4.0GHz, Coffee Lake',1,1649.99),
 # šifra 10
-('NVIDIA GTX1050 2GB','2GB DDR5',3),
+('NVIDIA GTX1050 2GB','2GB DDR5',3,990.00),
 # šifra 11
-('Intel Core i5 9400F','up to 4.10GHz, Coffee Lake',1),
+('Intel Core i5 9400F','up to 4.10GHz, Coffee Lake',1,1320.00),
 # šifra 12
-('NVIDIA GTX1650 4GB','4GB GDDR5',3),
+('NVIDIA GTX1650 4GB','4GB GDDR5',3,1354.00),
 # šifra 13
-('Memorija Adata DDR4 4GB','DDR4 4GB 2400MHz',5);
+('Memorija Adata DDR4 4GB','DDR4 4GB 2400MHz',5,166.31);
 
 
 insert into dio
-(konfiguracija,komponenta)
+(konfiguracija,komponenta,kolicina)
 values
 # šifra 1
-(1,1),
+(1,1,1),
 # šifra 2
-(1,2),
+(1,2,1),
 # šifra 3
-(2,1),
+(2,1,1),
 # šifra 4
-(2,3),
+(2,3,1),
 # šifra 5
-(3,4),
+(3,4,1),
 # šifra 6
-(3,2),
+(3,2,1),
 # šifra 7
-(4,4),
+(4,4,1),
 # šifra 8
-(4,5),
+(4,5,1),
 # šifra 9
-(5,5),
+(5,5,1),
 # šifra 10
-(5,6),
+(5,6,1),
 # šifra 11
-(6,7),
+(6,7,1),
 # šifra 12
-(6,8),
+(6,8,1),
 # šifra 13
-(7,9),
+(7,9,1),
 # šifra 14
-(7,10),
+(7,10,1),
 # šifra 15
-(8,11),
+(8,11,1),
 # šifra 16
-(8,12),
+(8,12,1),
 # šifra 17
-(1,13),
+(1,13,2),
 # šifra 18
-(2,13),
+(2,13,2),
 # šifra 19
-(3,13),
+(3,13,2),
 # šifra 20
-(4,13),
+(4,13,2),
 # šifra 21
-(5,13),
+(5,13,2),
 # šifra 22
-(6,13),
+(6,13,2),
 # šifra 23
-(7,13),
+(7,13,2),
 # šifra 24
-(8,13);
+(8,13,2);
 
 
 # šta dalje?
